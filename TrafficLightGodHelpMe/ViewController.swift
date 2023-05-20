@@ -9,11 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var trafficGreen: UIView!
+    @IBOutlet var trafficYelow: UIView!
+    @IBOutlet var trafficRed: UIView!
+    @IBOutlet var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        trafficGreen.layer.cornerRadius = 50
+        trafficYelow.layer.cornerRadius = 50
+        trafficRed.layer.cornerRadius = 50
+        startButton.layer.cornerRadius = 25
+        
     }
 
-
+    @IBAction func pushNextColor() {
+    }
+    
 }
 
