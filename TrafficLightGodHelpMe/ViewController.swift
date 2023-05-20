@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var trafficYelow: UIView!
     @IBOutlet var trafficRed: UIView!
     @IBOutlet var startButton: UIButton!
+    var countTaps = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pushNextColor() {
-        
+        switch countTaps {
+        case 0:
+            trafficYelow.alpha = 0.3
+            trafficRed.alpha = 1
+            countTaps += 1
+        case 1:
+            trafficRed.alpha = 0.3
+            trafficGreen.alpha = 1
+            countTaps += 1
+        case 2:
+            trafficGreen.alpha = 0.3
+            trafficYelow.alpha = 1
+            countTaps = 0
+        default:
+            break
+        }
     }
     
 }
