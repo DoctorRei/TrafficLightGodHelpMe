@@ -23,9 +23,14 @@ class ViewController: UIViewController {
         trafficRed.layer.cornerRadius = 50
         startButton.layer.cornerRadius = 25
         
+        trafficGreen.alpha = 0.3
+        trafficYelow.alpha = 0.3
+        trafficRed.alpha = 0.3
+        
     }
 
     @IBAction func pushNextColor() {
+        
     }
     
 }
