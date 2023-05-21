@@ -16,12 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet var startButton: UIButton!
     var countTaps = 0
     
-    override func viewDidLoad() {
+    override func viewDidLoad() {  // изначально сделал как = 50, пока в разборе Алексей не сказал о том, что нужно просто делить на 2
         super.viewDidLoad()
         
-        trafficGreen.layer.cornerRadius = 50
-        trafficYelow.layer.cornerRadius = 50
-        trafficRed.layer.cornerRadius = 50
+        trafficGreen.layer.cornerRadius =
+        trafficGreen.frame.width / 2
+        trafficYelow.layer.cornerRadius =
+        trafficYelow.frame.width / 2
+        trafficRed.layer.cornerRadius =
+        trafficRed.frame.width / 2
+        
         startButton.layer.cornerRadius = 25
         
         trafficGreen.alpha = 0.3
