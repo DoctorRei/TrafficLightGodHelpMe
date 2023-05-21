@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pushNextColor() {
+        startButton.setTitle("Next!", for: .normal)
+        
         switch countTaps {
         case 0:
             trafficYelow.alpha = 0.3
